@@ -1,14 +1,19 @@
-require File.expand_path('../../config/application', __FILE__)
-
-require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/packagetask'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
+require 'rspec/core/rake_task'
+require 'cucumber/rake/task'
+require 'spree_core/testing_support/common_rake'
+
+RSpec::Core::RakeTask.new
+Cucumber::Rake::Task.new
+
+task :default => [:spec, :cucumber ]
 
 spec = eval(File.read('spree_ajax_cart.gemspec'))
 
-Rake::GemPackageTask.new(spec) do |p|
+Gem::PackageTask.new(spec) do |p|
   p.gem_spec = spec
 end
 
