@@ -1,4 +1,4 @@
-OrdersController.class_eval do
+Spree::OrdersController.class_eval do
   def add
     @order = current_order(true)
     variant = Variant.find(params[:variant_id])
