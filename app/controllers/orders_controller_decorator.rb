@@ -6,8 +6,11 @@ Spree::OrdersController.class_eval do
   def add
     @order = current_order(true)
     variant = Spree::Variant.find(params[:variant_id])
+    amount = params[:amount] ? params[:amount].to_i : 1
 
-    @order.add_variant(variant, 1)
+    @order.add_variant(variant, amount)
+
+    @order.update!
   end
   
   def update
