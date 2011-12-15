@@ -1,0 +1,1 @@
+$("#link-to-cart a").text("<%= escape_javascript("#{t('cart')}: (#{current_order.item_count}) #{order_subtotal(current_order)}") %>");

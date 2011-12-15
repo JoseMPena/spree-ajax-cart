@@ -1,14 +1,13 @@
 Spree::OrdersController.class_eval do
+  
+  include Spree::BaseHelper
+  include ActionView::Helpers::NumberHelper
+  
   def add
     @order = current_order(true)
-    variant = Variant.find(params[:variant_id])
-    
-    @order.add_variant(variant, 1)
-    flash[:notice] = "Added #{variant.name} to cart"
+    variant = Spree::Variant.find(params[:variant_id])
 
-    respond_to do | format |
-      format.js { render :action => 'edit' }  
-    end
+    @order.add_variant(variant, 1)
   end
   
   def update

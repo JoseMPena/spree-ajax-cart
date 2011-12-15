@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  match '/cart/add/(:variant_id)',  :to => 'orders#add',        :via => :put, :as => :add_to_cart
-  match '/ajax_cart',               :to => 'orders#ajax_cart',  :via => :get, :as => :ajax_cart
+  scope :module => "spree" do
+    put '/cart/add/(:variant_id)',  :to => 'orders#add',        :as => :add_to_cart
+    get '/ajax_cart',               :to => 'orders#ajax_cart',  :as => :ajax_cart
+  end
 end
