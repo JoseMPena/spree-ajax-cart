@@ -1,3 +1,5 @@
 /*
  *= require store/spree_core
 */
+
+#add-to-cart-ajax-link { display: none; }

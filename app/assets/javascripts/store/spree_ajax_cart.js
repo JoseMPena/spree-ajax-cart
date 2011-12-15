@@ -5,5 +5,7 @@
       $(this).parents('form').submit();
       return false;
     });
+    $('#add-to-cart-ajax-link').show();
+    $('#add-to-cart-button').hide();
   });
 })(jQuery);
