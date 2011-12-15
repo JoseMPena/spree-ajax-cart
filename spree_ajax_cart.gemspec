@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'A spree extension for an add to cart ajax button.'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author            = 'Pogodan'
+  s.author            = ['Pogodan', 'Roman Simecek (roman@good2go.ch)']
   s.email             = 'info@pogodan.com'
   s.homepage          = 'http://www.pogodan.com'
   s.rubyforge_project = 'spree_ajax_cart'
@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = true
 
-  s.add_dependency('spree_core', '>= 0.40.0')
+  s.add_dependency('spree_core', '>= 1.0.0.beta')
 end
