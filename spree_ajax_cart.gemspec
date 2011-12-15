@@ -2,14 +2,14 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_ajax_cart'
   s.version     = '1.0.0'
-  s.summary     = 'Add gem summary here'
-  #s.description = 'Add (optional) gem description here'
+  s.summary     = 'Ajax spree cart'
+  s.description = 'A spree extension for an add to cart ajax button.'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author            = 'David Heinemeier Hansson'
-  # s.email             = 'david@loudthinking.com'
-  # s.homepage          = 'http://www.rubyonrails.org'
-  # s.rubyforge_project = 'actionmailer'
+  s.author            = 'Pogodan'
+  s.email             = 'info@pogodan.com'
+  s.homepage          = 'http://www.pogodan.com'
+  s.rubyforge_project = 'spree_ajax_cart'
 
   s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'db/**/*', 'public/**/*']
   s.require_path = 'lib'
