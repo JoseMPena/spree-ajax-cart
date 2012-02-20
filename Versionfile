@@ -1,2 +1,3 @@
-"1.0.0.rc" => { :branch => "master"}
+"1.0.0.rc2" =>  { :branch => "master"}
+"1.0.0.rc1" =>  { :ref => "f98f04b600df1b310a5bd3ebc877366f8b172142"}
 "1.0.0.beta" => { :ref => "2ed971eca70342e69b6716435bcfbcb1b2d8daa1"}
