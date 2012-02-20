@@ -7,10 +7,13 @@ Spree::OrdersController.class_eval do
     @order = current_order(true)
     variant = Spree::Variant.find(params[:variant_id])
     amount = params[:amount] ? params[:amount].to_i : 1
-
     @order.add_variant(variant, amount)
-
     @order.update!
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js { @order.to_json }
+    end
   end
   
   def update
