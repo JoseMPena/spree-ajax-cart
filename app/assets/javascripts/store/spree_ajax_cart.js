@@ -1,6 +1,6 @@
 (function($){
   $(document).ready(function(){
-		$("form#update-cart a.delete").live("click", function(){
+		$('body').on('click', "form#update-cart a.delete", function(){
       $(this).parents('tr').find('input.line_item_quantity').val(0);
       $(this).parents('form').submit();
       return false;
